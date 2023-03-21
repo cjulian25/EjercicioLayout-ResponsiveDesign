@@ -1,0 +1,156 @@
+/*CAMBIO DE FUENTE*/
+
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/*RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+
+/*CONFIGURACION BODY Y HTML*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*MAIN*/
+
+main {
+    display: grid;
+    padding: 1%;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 10% 10% 1fr 1fr 10%;
+    gap: 1%;
+    border: solid 2px black;
+}
+
+
+/*HEADER*/
+
+header {
+    display: grid;
+    place-content: center;
+    grid-row: 1/2;
+    background-color: blue;
+}
+
+
+/* NAV */
+
+nav {
+    display: grid;
+    place-content: center;
+    grid-row: 2/3;
+    background-color: green;
+}
+
+
+/* ASIDE - SECTION*/
+
+aside {
+    display: grid;
+    place-content: center;
+    grid-row: 3/4;
+    background-color: red;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2%;
+    flex-direction: column;
+    grid-row: 4/5;
+    background-color: orange;
+}
+
+article {
+    display: grid;
+    place-items: center;
+    height: 25%;
+    margin: 0 2%;
+    background-color: gray;
+}
+
+
+/*FOOTER*/
+
+footer {
+    display: grid;
+    place-content: center;
+    grid-row: 5/6;
+    background-color: yellow;
+}
+
+/* AJUSTE DE MEDIA */
+
+@media screen and (min-width: 768px) {
+
+    /*MAIN*/
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 10% 10% 1fr 10%;
+    }
+
+
+    /*HEADER*/
+
+    header {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-color: orange;
+    }
+
+
+    /* NAV */
+
+    nav {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        background-color: red;
+    }
+
+
+    /* ASIDE */
+
+    aside {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background-color: yellow;
+    }
+
+
+    /* SECTION */
+
+    section {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        background-color: fuchsia;
+    }
+
+    article {
+        background-color: green;
+    }
+
+
+    /*FOOTER*/
+
+    footer {
+        grid-column: 1/3;
+        grid-row: 4/5;
+        background-color: blue;
+    }
+}
